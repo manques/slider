@@ -1,0 +1,144 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title> owl carousel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+        <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+        
+        <!-- <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                outline: none;
+                box-sizing: border-box;
+            }
+            body {
+                width: 100%;
+                height: auto;
+                font-family:'Courier New', Courier, monospace;
+            }
+            .bien-carousel-container{
+                width: 100%;
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url("./services/services_bg.jpg");
+                background-size: 100% 100%;
+            }
+            .bien-carousel-inner {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 5%;
+                border-radius: 10px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bien-logo-slider{
+                width: 100% !important;
+            }
+            .bien-logo-slider .slide-item {
+                background-color: brown;
+                border: 5px solid red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bien-service-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: chartreuse;
+
+            }
+            .bien-service-item-inner{
+                width: 100px;
+                height: 200px;
+                background: chocolate;
+            }
+            /* button */
+            button[data-action]{
+                display: none;            
+            }
+            div[class="tns-controls"]{
+                display: none;
+            }
+            div[class="tns-nav"]{
+                display: flex;
+                justify-content: center;
+            }
+            div[class="tns-nav"] button {
+                margin-top: 10px;
+                padding: 7px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- owl carousel  controls-->
+        <div class="bien-carousel-container">
+            <div class="bien-carousel-inner">
+                <div class="bien-logo-slider">
+                    <div class="slide-item">
+                        <div class="bien-service-item">
+                            <div class="bien-service-item-inner">sfsdfsfsdf</div>
+                        </div>
+                    </div>
+                    <div class="slide-item">sdsds</div>
+                    <div class="slide-item">ppp  </div>
+                    <div class="slide-item">99999999</div>
+                  </div>
+                 </div>
+        </div>
+        <!-- script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+        <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <script>
+
+            var slider = tns({
+            container: '.bien-logo-slider',
+            items: 1,
+            slideBy: 1,
+            autoplay: true,
+            loop: true,
+            rewind: false,
+            speed: 500,
+            autoWidth: false,
+            center: true,
+            autoplayResetOnVisibility: true,
+            autoplayHoverPause: true,
+            navContainer: false,
+            navAsThumbnails: false,
+            controlsPosition: "bottom",
+            navPosition: "bottom",
+            autoplayPosition: "bottom",
+            autoplayTimeout: 1000,
+            responsive: {
+                576: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                992: {
+                    items: 3
+                }
+            }
+            });
+            var buttons = document.querySelectorAll('.tns-nav button')
+	buttons.forEach(function() {
+		this.addEventListener('click', function(e) {
+			slider.play()
+		})
+	})
+        </script>
+    </body>
+</html>

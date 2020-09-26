@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
+        <title>owl</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0px;
+                margin: 0px;
+                outline: none;
+            }
+            body {
+                font-family:'Courier New', Courier, monospace;
+                width: 100%;
+                background-color: cornsilk;
+                min-height: 100%;
+            }
+            .bien-owl-slider-container {
+                width: 100%;
+                height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: crimson;
+                padding: 10%;
+            }
+            .bien-owl-slider-container-box {
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                background: rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                border-radius: 10px;;
+            }
+            .bien-owl-slider-container-box .owl-item{
+                border: 1px solid pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bien-owl-slider-container">
+            <div class="bien-owl-slider-container-box">
+                <div class="owl-carousel owl-theme">
+                    <div> Your Content1 </div>
+                    <div> Your Content2 </div>
+                    <div> Your Content3 </div>
+                    <div> Your Content4 </div>
+                  </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $('.owl-carousel').owlCarousel({
+                    loop:true,
+                    margin:10,
+                    center: true,
+                    responsiveClass:true,
+                    responsive:{
+                        0:{
+                            items:1,
+                            nav:true
+                        },
+                        600:{
+                            items:2,
+                            nav:false
+                        },
+                        1000:{
+                            items:3,
+                            nav:true,
+                            loop:false
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

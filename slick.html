@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+        <title>slick slider</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                outline: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            body {
+                width: 100%;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                /* background-color: darkgrey; */
+                min-height: 100%;
+            }
+            .bien-slick-container{
+                width: 100%;
+                min-height: 500px;
+                padding: 5%;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bien-slick-container-inner{
+                width: 100%;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 3%;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bien-slick-box {
+                color: white;
+                border: 1px solid red;
+                background: rgba(255, 255, 255, 0.5);
+                width: 100%;
+            }
+            .bien-slick-box .slick-slide {
+                border: 1px solid pink;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height:300px;
+            }
+            .bien-slick-box .slick-active {
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bien-slick-container">
+            <div class="bien-slick-container-inner">
+                <div class="bien-slick-box">
+                    <div class="bien-slider-all">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.1/jquery-migrate.min.js" integrity="sha512-wDH73bv6rW6O6ev5DGYexNboWMzBoY+1TEAx5Q/sdbqN2MB2cNTG9Ge/qv3c1QNvuiAuETsKJnnHH2UDJGmmAQ==" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $('.bien-slider-all').slick({
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: true,
+                    speed: 300,
+                    centerMode: true,
+                    variableWidth: false,
+                    adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    fade: false,
+                    cssEase: 'linear',
+                    responsive: [
+                        {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 2
+                        }
+                        },
+                        {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                        }
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>

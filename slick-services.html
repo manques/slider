@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+        <title>slick slider</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                outline: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            body {
+                width: 100%;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                /* background-color: darkgrey; */
+                min-height: 100%;
+            }
+            .bien-services-slick-container{
+                width: 100%;
+                min-height: 700px;
+                padding: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bien-services-slick-container-inner{
+                width: 100%;
+                height: 100%;
+                padding: 5%;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .bien-services-slick-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .bien-services-slick-slide {
+                width: 100%;
+                max-width: 1000px;
+                margin: auto;
+            }
+            /* .slick-track {
+                border: 1px solid yellowgreen;
+            } */
+            .bien-services-slick-box .slick-slide {
+                /* border: 1px solid pink; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* min-height:300px; */
+                padding: 10px;
+                height: 100%;
+            }
+            
+            /* .bien-services-slick-box .slick-slide  div{
+                border: 1px solid orange;
+                width: 100%;
+                padding: 5px;
+            } */
+            .bien-services-slick-box .slick-slide > div{
+                /* border: 1px solid purple; */
+                width: 100%;
+                padding: 5px;
+            }
+            /* .bien-services-slick-box .slick-active {
+
+            } */
+
+
+
+
+            /* change  */
+            .bien-services-container-full {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            .bien-services-container-full-inner {
+                background: rgba(0, 0, 0, 0.9);
+            }
+            .bien-services-container-full-inner-content {
+                padding: 10px;
+            }
+            .bien-services-container-full-inner-content > div{
+                width: 100%;
+            }
+            .bien-services-container-full-inner-content h2.title{
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+                width: 100%;
+            }
+            .bien-services-container-full-inner-content p.paragraph{
+                color: white;
+            }
+            /* slide container */
+            .bien-services-container-full-inner-slide {
+                color: white;
+            }
+            /* slide item */
+            .bien-services-container-item-full {
+                width: 100%;
+            }
+            
+            .bien-services-container-item-box-full {
+                height: 100%;
+                width: 100%;
+                border: 1px solid rgb(0, 255, 106);
+                border-radius: 10px;
+            }
+            /* item  ---- */
+            .bien-services-container-item {
+                    width: 100%;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid brown;
+                }
+                .bien-services-container-item-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    background: rgba(120,120,120, 0.5);
+                    border-radius: 10px;
+                }
+                .bien-services-container-item-content:hover{
+                    background: white;
+                    color: black;
+                }
+                .bien-services-container-item-content:hover .bien-services-container-item-content-read-more{
+                    color: white;
+                }
+                .bien-services-container-item-content-icon{
+                        font-size: 60px;
+                        padding: 20px 0px 10px 0px;
+                }
+                .bien-services-container-item-content-heading{
+
+                }
+                .bien-services-container-item-content-paragraph{
+                    margin-bottom: 26px;
+                    padding: 10px 0px 20px 0px;
+                }
+                .bien-services-container-item-content-read-more{
+                    transition: all 0.5s ease;
+                    border: 1px #999 solid;
+                    padding: 5px 10px;
+                    background: #008dd2;
+                    font-size: 12px;
+                    text-decoration: none;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    border-radius: 0px 0px 10px 10px;
+                }
+                .bien-services-container-item-content-read-more:hover{
+                    background: rgba(0, 141, 210, 0.5);
+                }
+        </style>
+    </head>
+    <body>
+            <div class="bien-services-slick-container bien-services-container-full" id="services">
+                <div class="bien-services-slick-container-inner bien-services-container-full-inner">
+                    <div class="bien-services-slick-content bien-services-container-full-inner-content">
+                        <div><h2 class="title">SERVICES</h2></div>
+                        <div><h2 class="title"><strong>WHAT WE OFFER</strong></h2></div>
+                    </div>
+                    <div class="bien-services-slick-slide bien-services-container-full-inner-slide">
+                        <div class="bien-slider-all">
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-services-container-item-full">
+                                    <div class="bien-services-container-item-box-full">
+                                        <!-- item 1 -->
+                                            <div class="bien-services-container-item">
+                                                <div class="bien-services-container-item-content">
+                                                    <div class="bien-services-container-item-content-icon">
+                                                        <i class="fa fa-users"></i>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-heading">
+                                                        <h3><strong>Business Application</strong></h3>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-paragraph">
+                                                        <p>Small screen, big potential. Digital experiences for..</p>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-read-more"><p>Read More..</p></div>
+                                                </div>
+                                            </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-services-container-item-full">
+                                    <div class="bien-services-container-item-box-full">
+                                        <!-- item 1 -->
+                                            <div class="bien-services-container-item">
+                                                <div class="bien-services-container-item-content">
+                                                    <div class="bien-services-container-item-content-icon">
+                                                        <i class="fa fa-users"></i>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-heading">
+                                                        <h3><strong>Business Application</strong></h3>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-paragraph">
+                                                        <p>Small screen, big potential. Digital experiences for..</p>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-read-more"><p>Read More..</p></div>
+                                                </div>
+                                            </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-services-container-item-full">
+                                    <div class="bien-services-container-item-box-full">
+                                        <!-- item 1 -->
+                                            <div class="bien-services-container-item">
+                                                <div class="bien-services-container-item-content">
+                                                    <div class="bien-services-container-item-content-icon">
+                                                        <i class="fa fa-users"></i>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-heading">
+                                                        <h3><strong>Business Application</strong></h3>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-paragraph">
+                                                        <p>Small screen, big potential. Digital experiences for..</p>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-read-more"><p>Read More..</p></div>
+                                                </div>
+                                            </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-services-container-item-full">
+                                    <div class="bien-services-container-item-box-full">
+                                        <!-- item 1 -->
+                                            <div class="bien-services-container-item">
+                                                <div class="bien-services-container-item-content">
+                                                    <div class="bien-services-container-item-content-icon">
+                                                        <i class="fa fa-users"></i>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-heading">
+                                                        <h3><strong>Business Application</strong></h3>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-paragraph">
+                                                        <p>Small screen, big potential. Digital experiences for..</p>
+                                                    </div>
+                                                    <div class="bien-services-container-item-content-read-more"><p>Read More..</p></div>
+                                                </div>
+                                            </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.1/jquery-migrate.min.js" integrity="sha512-wDH73bv6rW6O6ev5DGYexNboWMzBoY+1TEAx5Q/sdbqN2MB2cNTG9Ge/qv3c1QNvuiAuETsKJnnHH2UDJGmmAQ==" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $('.bien-services-slider-all').slick({
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: true,
+                    speed: 300,
+                    centerMode: true,
+                    variableWidth: false,
+                    adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    fade: false,
+                    cssEase: 'linear',
+                    responsive: [
+                        {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 2
+                        }
+                        },
+                        {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                        }
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>

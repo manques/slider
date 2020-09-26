@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+        <title>slick slider</title>
+        <style>
+            *{
+                box-sizing: border-box;
+                outline: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            body {
+                width: 100%;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                /* background-color: darkgrey; */
+                min-height: 100%;
+            }
+            .bien-expertise-slick-container{
+                width: 100%;
+                min-height: 700px;
+                padding: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .bien-expertise-slick-container-inner{
+                width: 100%;
+                height: 100%;
+                padding: 5%;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .bien-expertise-slick-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .bien-expertise-slick-slide {
+                width: 100%;
+                max-width: 1000px;
+                margin: auto;
+            }
+            /* .slick-track {
+                border: 1px solid yellowgreen;
+            } */
+            .bien-expertise-slick-box .slick-slide {
+                /* border: 1px solid pink; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* min-height:300px; */
+                padding: 10px;
+                height: 100%;
+            }
+            
+            /* .bien-expertise-slick-box .slick-slide  div{
+                border: 1px solid orange;
+                width: 100%;
+                padding: 5px;
+            } */
+            .bien-expertise-slick-box .slick-slide > div{
+                /* border: 1px solid purple; */
+                width: 100%;
+                padding: 5px;
+            }
+            /* .bien-expertise-slick-box .slick-active {
+
+            } */
+
+
+
+
+            /* change  */
+            .bien-expertise-container-full {
+                background: rgba(0, 0, 0, 0.8);
+            }
+            .bien-expertise-container-full-inner {
+                background: rgba(0, 0, 0, 0.9);
+            }
+            .bien-expertise-container-full-inner-content {
+                padding: 10px;
+            }
+            .bien-expertise-container-full-inner-content > div{
+                width: 100%;
+            }
+            .bien-expertise-container-full-inner-content h2.title{
+                color: white;
+                text-transform: uppercase;
+                text-align: center;
+                width: 100%;
+            }
+            .bien-expertise-container-full-inner-content p.paragraph{
+                color: white;
+            }
+            /* slide container */
+            .bien-expertise-container-full-inner-slide {
+                color: white;
+            }
+            /* slide item */
+            .bien-expertise-container-item-full {
+                width: 100%;
+            }
+            
+            .bien-expertise-container-item-box-full {
+                height: 100%;
+                width: 100%;
+                border: 1px solid rgb(0, 255, 106);
+                border-radius: 10px;
+            }
+            /* item  ---- */
+            .bien-expertise-box-item{
+                width: 100%;
+                min-height: 350px;
+                /* height: auto; */
+                border: 1px solid red;
+                padding: 2%;
+                background: rgb(38, 156, 77);
+            }
+            .bien-expertise-content-box {
+                width: 100%;
+                min-height: 350px;
+                /* height: auto; */
+                background-image: url("./expertise/DataAnalytics.jpg");
+                background-size: 100% 100%;
+                border-radius: 10px;
+                position: relative;
+                /* padding: 5px; */
+                text-align: center; 
+            }
+            .bien-expertise-content-box-inner{
+                /* height: auto; */
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                text-align: center;
+                padding: 10px;
+                border-radius: 0px 0px 10px 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+            }
+            .bien-expertise-content-box-inner:hover {
+                min-height: 350px;
+                border-radius: 10px;
+                top: 0;
+                background: white;
+                color: black;
+            }
+            .bien-expertise-content-box-inner h3 {
+
+                margin: 0px;
+                padding: 2px;
+                color: white;
+            }
+            .bien-expertise-content-box-inner:hover h3{
+                color: black;
+            }
+            .bien-expertise-content-box-inner div{
+                display: none;
+                color: white;
+            }
+            .bien-expertise-content-box-inner:hover div{
+                display: block;
+            }
+            .bien-expertise-content-box-inner:hover div p{
+                color: black;
+                text-align: justify;
+            }
+            .bien-expertise-content-box-inner:hover div.read-more a{
+                color: white;
+                text-decoration: none;
+                background: #a4bb21;
+                padding: 5px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            @media screen and (min-width: 576px) {
+
+            }
+            @media screen and (min-width: 768px) {
+                
+            }
+            @media screen and (min-width: 992px) {
+
+            }
+            @media screen and (min-width: 1200px) {
+                
+            }
+        </style>
+    </head>
+    <body>
+            <div class="bien-expertise-slick-container bien-expertise-container-full" id="expertise">
+                <div class="bien-expertise-slick-container-inner bien-expertise-container-full-inner">
+                    <div class="bien-expertise-slick-content bien-expertise-container-full-inner-content">
+                        <div><h2 class="title">expertise</h2></div>
+                        <div><h2 class="title"><strong>HELPING YOU OPERATE WITH CONFIDANCE IN A DIGITAL WORLD</strong></h2></div>
+                    </div>
+                    <div class="bien-expertise-slick-slide bien-expertise-container-full-inner-slide">
+                        <div class="bien-slider-all">
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-expertise-container-item-full">
+                                    <div class="bien-expertise-container-item-box-full">
+                                        <!-- item 1 -->
+                                        <div class="bien-expertise-box-item">
+                                            <div class="bien-expertise-content-box">
+                                                <div class="bien-expertise-content-box-inner">
+                                                    <h3>DATA ANALYTICS</h3>
+                                                    <div>
+                                                        <p>Machine learning is considered a key constituent of the artificial intelligence umbrella. It employs software algorithms and statistical paradigms to process past data, patterns and trends and produce outputs without the need for explicit programming. Machine learning operates through a...</p>
+                                                        <div class="read-more"><a href="#">read more.. </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-expertise-container-item-full">
+                                    <div class="bien-expertise-container-item-box-full">
+                                        <!-- item 1 -->
+                                        <div class="bien-expertise-box-item">
+                                            <div class="bien-expertise-content-box">
+                                                <div class="bien-expertise-content-box-inner">
+                                                    <h3>DATA ANALYTICS</h3>
+                                                    <div>
+                                                        <p>Machine learning is considered a key constituent of the artificial intelligence umbrella. It employs software algorithms and statistical paradigms to process past data, patterns and trends and produce outputs without the need for explicit programming. Machine learning operates through a...</p>
+                                                        <div class="read-more"><a href="#">read more.. </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-expertise-container-item-full">
+                                    <div class="bien-expertise-container-item-box-full">
+                                        <!-- item 1 -->
+                                        <div class="bien-expertise-box-item">
+                                            <div class="bien-expertise-content-box">
+                                                <div class="bien-expertise-content-box-inner">
+                                                    <h3>DATA ANALYTICS</h3>
+                                                    <div>
+                                                        <p>Machine learning is considered a key constituent of the artificial intelligence umbrella. It employs software algorithms and statistical paradigms to process past data, patterns and trends and produce outputs without the need for explicit programming. Machine learning operates through a...</p>
+                                                        <div class="read-more"><a href="#">read more.. </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                            <!-- slide start -->
+                            <div>
+                                <div class="bien-expertise-container-item-full">
+                                    <div class="bien-expertise-container-item-box-full">
+                                        <!-- item 1 -->
+                                        <div class="bien-expertise-box-item">
+                                            <div class="bien-expertise-content-box">
+                                                <div class="bien-expertise-content-box-inner">
+                                                    <h3>DATA ANALYTICS</h3>
+                                                    <div>
+                                                        <p>Machine learning is considered a key constituent of the artificial intelligence umbrella. It employs software algorithms and statistical paradigms to process past data, patterns and trends and produce outputs without the need for explicit programming. Machine learning operates through a...</p>
+                                                        <div class="read-more"><a href="#">read more.. </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- item 1 end -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.1/jquery-migrate.min.js" integrity="sha512-wDH73bv6rW6O6ev5DGYexNboWMzBoY+1TEAx5Q/sdbqN2MB2cNTG9Ge/qv3c1QNvuiAuETsKJnnHH2UDJGmmAQ==" crossorigin="anonymous"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $('.bien-slider-all').slick({
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: true,
+                    speed: 300,
+                    centerMode: true,
+                    variableWidth: false,
+                    adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    fade: false,
+                    cssEase: 'linear',
+                    responsive: [
+                        {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 2
+                        }
+                        },
+                        {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                        }
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>

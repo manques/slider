@@ -1,0 +1,181 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            expertise
+        </title>
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0px;
+                margin: 0px;
+                outline: none;
+            }
+            body{
+                font-family:'Courier New', Courier, monospace;
+                width: 100%;
+            }
+            /* bien style */
+            .bien-expertise-container {
+                background-color: rgba(73, 183, 187, 1);
+                width: 100%;
+                min-height: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 5%;
+            }
+            .bien-expertise-box1 {
+                text-align: center;
+            }
+            .bien-expertise-box1 h2{
+                color: white;
+            }
+            .bien-expertise-box2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                /* height: auto; */
+            }
+            /* items  */
+            .bien-expertise-box-item{
+                width: 350px;
+                min-height: 350px;
+                /* height: auto; */
+                border: 1px solid red;
+                padding: 2%;
+                background: rgb(38, 156, 77);
+            }
+            .bien-expertise-content-box {
+                width: 100%;
+                min-height: 350px;
+                /* height: auto; */
+                background-image: url("./expertise/DataAnalytics.jpg");
+                background-size: 100% 100%;
+                border-radius: 10px;
+                position: relative;
+                /* padding: 5px; */
+                text-align: center; 
+            }
+            .bien-expertise-content-box-inner{
+                /* height: auto; */
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                text-align: center;
+                padding: 10px;
+                border-radius: 0px 0px 10px 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: white;
+            }
+            .bien-expertise-content-box-inner:hover {
+                min-height: 350px;
+                border-radius: 10px;
+                top: 0;
+                background: white;
+                color: black;
+            }
+            .bien-expertise-content-box-inner h3 {
+
+                margin: 0px;
+                padding: 2px;
+                color: white;
+            }
+            .bien-expertise-content-box-inner:hover h3{
+                color: black;
+            }
+            .bien-expertise-content-box-inner div{
+                display: none;
+                color: white;
+            }
+            .bien-expertise-content-box-inner:hover div{
+                display: block;
+            }
+            .bien-expertise-content-box-inner:hover div p{
+                color: black;
+                text-align: justify;
+            }
+            .bien-expertise-content-box-inner:hover div.read-more a{
+                color: white;
+                text-decoration: none;
+                background: #a4bb21;
+                padding: 5px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            @media screen and (min-width: 576px) {
+
+            }
+            @media screen and (min-width: 768px) {
+                
+            }
+            @media screen and (min-width: 992px) {
+
+            }
+            @media screen and (min-width: 1200px) {
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bien-expertise-container" id="expertise">
+            <div class="bien-expertise-box1">
+                <h2>
+                    EXPERTISE
+                </h2>
+                <h2>
+                    <strong>HELPING YOU OPERATE WITH CONFIDANCE IN A DIGITAL WORLD</strong>
+                </h2>
+            </div>
+            <div class="bien-expertise-box2">
+                <!-- item 1 start -->
+                <div class="bien-expertise-box-item">
+                    <div class="bien-expertise-content-box">
+                        <div class="bien-expertise-content-box-inner">
+                            <h3>DATA ANALYTICS</h3>
+                            <div>
+                                <p>Machine learning is considered a key constituent of the artificial intelligence umbrella. It employs software algorithms and statistical paradigms to process past data, patterns and trends and produce outputs without the need for explicit programming. Machine learning operates through a...</p>
+                                <div class="read-more"><a href="#">read more.. </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- item 1 end -->
+                <!-- item 2 start -->
+                <div class="bien-expertise-box-item">
+                    <div class="bien-expertise-content-box">
+                        <div class="bien-expertise-content-box-inner">
+                            <h3>DATA ANALYTICS</h3>
+                            <div>
+                                <p>Machine learning is considered a key constituent of the artificial intelligence umbrella. It employs software algorithms and statistical paradigms to process past data, patterns and trends and produce outputs without the need for explicit programming. Machine learning operates through a...</p>
+                                <div class="read-more"><a href="#">read more.. </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- item 2 end -->
+                <!-- item 3 start -->
+                <div class="bien-expertise-box-item">
+                    <div class="bien-expertise-content-box">
+                        <div class="bien-expertise-content-box-inner">
+                            <h3>DATA ANALYTICS</h3>
+                            <div><p>Machine learning is considered a key constituent of the artificial intelligence umbrella. It employs software algorithms and statistical paradigms to process past data, patterns and trends and produce outputs without the need for explicit programming. Machine learning operates through a...</p>
+                                <div class="read-more"><a href="#">read more.. </a></div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- items 3 end -->
+            </div>
+        </div>
+    </body>
+</html>

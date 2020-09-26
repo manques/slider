@@ -1,0 +1,100 @@
+<!doctype HTMl>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+                padding: 0px;
+                margin: 0px;
+                outline: none;
+            }
+            body {
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                width: 100%;
+            }
+            .bien-technology-container{
+                width: 100%;
+                background: linear-gradient(to right  , rgba(255, 0, 0, 0.3), rgba(44, 130, 201, 0.3));
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 3%;
+            }
+
+            .bien-technology-container-item1, .bien-technology-container-item2{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                padding: 1%;
+            }
+            @media screen and (min-width: 768px) {
+                .bien-technology-container-item1, .bien-technology-container-item2{
+                    width: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            @media screen and (min-width: 992px) {
+                .bien-technology-container-item1{
+                    width: 60%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .bien-technology-container-item2{
+                    width: 40%;
+                    display: flex;
+                   flex-wrap: wrap;
+                   justify-content: center;
+                   align-items: center;
+                }
+            }
+            .bien-technology-container-content{
+
+            }
+            .bien-technology-container-title{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .bien-technology-container-paragraph{
+                margin-bottom: 1rem;
+            }
+            .bien-technology-container-image{
+                width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bien-technology-container">
+            <div class="bien-technology-container-item1">
+                <div class="bien-technology-container-content">
+                    <h2 class="bien-technology-container-title">TECHNOLOGIES </h2>
+                    <h2 class="bien-technology-container-title">
+                        <strong>TECHNOLOGY HAS MADE US EVER MORE PRODUCTIVE</strong>
+                    </h2>
+                    <div class="bien-technology-container-paragraph">
+                        <p>Software applications are the cornerstone of an organisation’s virtual landscape. In an age where technology is evolving at a breakneck speed, an avant-garde IT ecosystem can support an organisation’s technological metamorphosis by way of superlative application development and maintenance, and lean processes and methodologies.</p>
+                    </div>
+                    <div class="bien-technology-container-paragraph">
+                       <p> As our ambit of services has grown, so has our resilient team of programmers, fluent in digital languages.</p>
+                    </div>
+                    <div class="bien-technology-container-paragraph">
+                        Working in tandem, Bien’s software architects enable our clients to extract maximum ROI from their hardware!
+                    </div>
+                </div>
+            </div>
+            <div class="bien-technology-container-item2">
+                <img src="./expertise/DataAnalytics.jpg" class="bien-technology-container-image">
+            </div>
+        </div>
+    </body>
+</html>

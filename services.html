@@ -1,0 +1,154 @@
+<!doctype HTML>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                *{
+                    box-sizing: border-box;
+                    padding: 0px;
+                    margin: 0px;
+                    outline: none;
+                }
+                body {
+                    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    width: 100%;
+                }
+                .bien-services-container {
+                    width: 100%;
+                    background-image: url("./services/services_bg.jpg");
+                    background-size: 100% 100%;
+                    padding: 5%;
+                }
+                .bien-services-container-inner {
+                    background: rgba(0, 0, 0, 0.5);
+                    min-height: 400px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .bien-services-container-title{
+                    text-align: center;
+                    color: white;
+                }
+                .bien-services-container-box {
+                    display: flex;
+                    align-items: center;
+                }
+                /* item  ---- */
+                .bien-services-container-item {
+                    width: 300px;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid brown;
+                }
+                .bien-services-container-item-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    background: rgba(120,120,120, 0.5);
+                    border-radius: 10px;
+                }
+                .bien-services-container-item-content:hover{
+                    background: white;
+                    color: black;
+                }
+                .bien-services-container-item-content:hover .bien-services-container-item-content-read-more{
+                    color: white;
+                }
+                .bien-services-container-item-content-icon{
+                        font-size: 60px;
+                        padding: 20px 0px 10px 0px;
+                }
+                .bien-services-container-item-content-heading{
+
+                }
+                .bien-services-container-item-content-paragraph{
+                    margin-bottom: 26px;
+                    padding: 10px 0px 20px 0px;
+                }
+                .bien-services-container-item-content-read-more{
+                    transition: all 0.5s ease;
+                    border: 1px #999 solid;
+                    padding: 5px 10px;
+                    background: #008dd2;
+                    font-size: 12px;
+                    text-decoration: none;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    border-radius: 0px 0px 10px 10px;
+                }
+                .bien-services-container-item-content-read-more:hover{
+                    background: rgba(0, 141, 210, 0.5);
+                }
+            </style>
+        </head>
+        <body>
+            <div class="bien-services-container" id="services">
+                <div class="bien-services-container-inner">
+                    <div class="bien-services-container-title">
+                        <h2>SERVICES</h2>
+                        <h2><strong>WHAT WE OFFER</strong></h2>
+                    </div>
+                    <div class="bien-services-container-box">
+                        <!-- item 1 -->
+                        <div class="bien-services-container-item">
+                            <div class="bien-services-container-item-content">
+                                <div class="bien-services-container-item-content-icon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <div class="bien-services-container-item-content-heading">
+                                    <h3><strong>Business Application</strong></h3>
+                                </div>
+                                <div class="bien-services-container-item-content-paragraph">
+                                    <p>Small screen, big potential. Digital experiences for..</p>
+                                </div>
+                                <div class="bien-services-container-item-content-read-more"><p>Read More..</p></div>
+                            </div>
+                        </div>
+                        <!-- item 1 end -->
+                        <!-- item 2 -->
+                        <div class="bien-services-container-item">
+                            <div class="bien-services-container-item-content">
+                                <div class="bien-services-container-item-content-icon">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <div class="bien-services-container-item-content-heading">
+                                    <h3><strong>Business Application</strong></h3>
+                                </div>
+                                <div class="bien-services-container-item-content-paragraph">
+                                    <p>Small screen, big potential. Digital experiences for..</p>
+                                </div>
+                                <div class="bien-services-container-item-content-read-more"><p>Read More..</p></div>
+                            </div>
+                        </div>
+                        <!-- item 2 end -->
+                        <!-- item 3 -->
+                        <div class="bien-services-container-item">
+                            <div class="bien-services-container-item-content">
+                                <div class="bien-services-container-item-content-icon">
+                                    <i class="fa fa-users"></i>f
+                                </div>
+                                <div class="bien-services-container-item-content-heading">
+                                    <h3><strong>Business Application</strong></h3>
+                                </div>
+                                <div class="bien-services-container-item-content-paragraph">
+                                    <p>Small screen, big potential. Digital experiences for..</p>
+                                </div>
+                                <div class="bien-services-container-item-content-read-more"><p>Read More..</p></div>
+                            </div>
+                        </div>
+                        <!-- item 3 end -->
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
